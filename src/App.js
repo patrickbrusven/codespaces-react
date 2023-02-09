@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.scss";
 import "./Normalize.css";
 import HeroSection from "./HeroSection";
 

@@ -1,0 +1,110 @@
+:root {
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --darkBackground: #205072;
+  --darkist: #437285;
+  --darker: #669498;
+  --dark: #89B6AC;
+  --light: #ACD8BF;
+  --lighter: #CFFAD2;
+  --fontlight: #a8b2d1;
+  --fontlighter: #ccd6f6;
+  --fontLightist: #e6f1ff;
+  --fontHighlight: #ffb464;
+}
+
+@font-face {
+  font-family: SF-Pro;
+  src: url(./fonts/SF-Pro/SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+  font-family: PTMono;
+  src: url(./fonts/SF-Pro/PTMono-Regular.ttf);
+}
+
+.App {
+  font-family: "SF-Pro";
+}
+
+.highlight-text {
+  font-family: "PTMono";
+  color: var(--fontHighlight);
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.heading-text {
+  color: var(--fontLightist);
+  font-size: 7rem;
+}
+
+.subheading-text {
+  color: var(--fontlight);
+  font-size: 5rem;
+  
+}
+
+.content-text {
+  color: var(--fontlight);
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
+.disappear {
+  opacity: 0 !important;
+}
+
+// .fadeup-enter {
+//   opacity: 0.01;
+//   transform: translateY(20px);
+//   transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+// }
+// .fadeup-enter-active {
+//   opacity: .2;
+//   transform: translateY(0px);
+//   transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+// }
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.relative-wrapper {
+  position: relative;
+}
+
+.hero-card {
+  position: relative;
+  background-color: var(--darkBackground);
+  position: relative;
+  justify-content: center;
+  display: flex;
+  min-height: max-content;
+  min-width: max-content;
+  overflow: hidden;
+  &__background {
+    path {
+      transition: opacity 300ms var(--easing);
+      opacity: .3;
+    }
+  }
+  &__content {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    color: #ffb464;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // padding: 20px;
+    text-align: left;
+  }
+  
+}
+
+.corner-blobs {
+  /* height: 500px; */
+}
+
