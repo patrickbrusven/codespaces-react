@@ -1,5 +1,3 @@
-import "./App.scss";
-import "./Normalize.css";
 import HeroSection from "./HeroSection";
 import NavBar from "./NavBar";
 import AboutSection from "./AboutSection";

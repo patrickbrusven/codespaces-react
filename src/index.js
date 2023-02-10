@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import "./fonts/SF-Pro/SF-Pro-Display-Regular.otf";
+import "./fonts/SF-Pro/RobotoMono-ExtraLight.ttf";
+import "./index.css";
+import "./App.scss";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

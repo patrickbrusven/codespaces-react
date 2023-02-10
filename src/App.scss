@@ -10,23 +10,15 @@
   --fontlighter: #ccd6f6;
   --fontLightist: #e6f1ff;
   --fontHighlight: #ffb464;
+  --fontFamilyHeading: 'SF-Pro', sans-serif;
+  --fontFamilyContent: 'RobotoMono', monospace;
 }
 body {
   background-color: var(--darkBackground);
 }
 
-@font-face {
-  font-family: SF-Pro;
-  src: url(./fonts/SF-Pro/SF-Pro-Display-Regular.otf);
-}
-
-@font-face {
-  font-family: RobotoMono;
-  src: url(./fonts/SF-Pro/RobotoMono-ExtraLight.ttf);
-}
-
 .App {
-  font-family: "SF-Pro";
+  font-family: var(--fontFamilyHeading);
   position: relative;
 }
 
@@ -34,7 +26,7 @@ body {
   z-index: 100;
   position: fixed;
   width: 100vw;
-  font-family: "RobotoMono";
+  font-family: var(--fontFamilyContent);
   color: var(--fontLightist);
   transition: transform var(--easing) .3s;
   &__container {
@@ -69,7 +61,7 @@ body {
 }
 
 .highlight-text {
-  font-family: "RobotoMono";
+  font-family: var(--fontFamilyContent);
   color: var(--fontHighlight);
   font-size: 1.25rem;
 }
@@ -90,7 +82,7 @@ body {
 
 .content-text {
   color: var(--fontlight);
-  font-family: "RobotoMono";
+  font-family: var(--fontFamilyContent);
   font-size: 1.25rem;
   line-height: 28px;
   letter-spacing: -.5px;
@@ -100,16 +92,16 @@ body {
   opacity: 0 !important;
 }
 
-// .fadeup-enter {
-//   opacity: 0.01;
-//   transform: translateY(20px);
-//   transition: opacity 300ms var(--easing), transform 300ms var(--easing);
-// }
-// .fadeup-enter-active {
-//   opacity: .2;
-//   transform: translateY(0px);
-//   transition: opacity 300ms var(--easing), transform 300ms var(--easing);
-// }
+.fadeup-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+}
+
+.fadeup-enter {
+  opacity: 0.01;
+  transform: translateY(20px);
+}
 
 .container {
   margin: 10% 20%;
