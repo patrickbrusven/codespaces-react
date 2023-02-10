@@ -1,28 +1,33 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 function NavBar() {
-  const navRef = useRef();
+  const [isVisible, setIsVisible] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   const handleScroll = () => {
-    if (navRef) {
-      const st = window.pageYOffset || document.documentElement.scrollTop;
-      if (st > 200) {
-        navRef.current.classList.add("nav-hide");
-      } else {
-        navRef.current.classList.remove("nav-hide");
-      }
+    const st = window.pageYOffset;
+    if (scrollPosition < st) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
     }
+    setScrollPosition(st);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return function cleanupListener() {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
-    <nav ref={navRef} className="nav-bar">
+    <nav
+      className="nav-bar"
+      style={{
+        transform: isVisible ? "translateY(0px)" : "translateY(-75px)",
+      }}
+    >
       <div className="nav-bar__container">
         <p>Patrick Brusven</p>
         <ol>

@@ -30,10 +30,6 @@ body {
   position: relative;
 }
 
-.nav-hide {
-  transform: translateY(-75px);
-}
-
 .nav-bar {
   z-index: 100;
   position: fixed;
@@ -157,5 +153,9 @@ body {
 
 .corner-blobs {
   /* height: 500px; */
+}
+
+.about-section {
+  min-height: 100vh;
 }
 
