@@ -11,6 +11,9 @@
   --fontLightist: #e6f1ff;
   --fontHighlight: #ffb464;
 }
+body {
+  background-color: var(--darkBackground);
+}
 
 @font-face {
   font-family: SF-Pro;
@@ -18,36 +21,78 @@
 }
 
 @font-face {
-  font-family: PTMono;
-  src: url(./fonts/SF-Pro/PTMono-Regular.ttf);
+  font-family: RobotoMono;
+  src: url(./fonts/SF-Pro/RobotoMono-ExtraLight.ttf);
 }
 
 .App {
   font-family: "SF-Pro";
+  position: relative;
+}
+
+.nav-bar {
+  z-index: 100;
+  position: fixed;
+  width: 100vw;
+  font-family: "RobotoMono";
+  color: var(--fontLightist);
+  &__container {
+    // width: 80%;
+    margin: 26px 75px;
+    display: flex;
+    justify-content: space-between;
+    p {
+      
+    }
+    ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      column-gap: 1rem;
+      height: 100%;
+      li {
+        height: 100%;
+        align-self: center;
+        font-size: 1rem;
+      }
+      span {
+        color: var(--fontHighlight);
+        margin-right: 5px;
+      }
+      li:last-child {
+        padding: 0.75rem 1rem;
+        border: solid 1px var(--fontHighlight);
+      }
+    }
+  }
 }
 
 .highlight-text {
-  font-family: "PTMono";
+  font-family: "RobotoMono";
   color: var(--fontHighlight);
-  font-size: 1.5rem;
-  font-weight: 100;
+  font-size: 1.25rem;
 }
 
 .heading-text {
   color: var(--fontLightist);
   font-size: 7rem;
+  line-height: 125px;
 }
 
 .subheading-text {
   color: var(--fontlight);
   font-size: 5rem;
+  line-height: 73px;
+  letter-spacing: -1px;
   
 }
 
 .content-text {
   color: var(--fontlight);
-  font-size: 1.5rem;
-  line-height: 1rem;
+  font-family: "RobotoMono";
+  font-size: 1.25rem;
+  line-height: 28px;
+  letter-spacing: -.5px;
 }
 
 .disappear {
@@ -93,13 +138,17 @@
   &__content {
     position: absolute;
     height: 100%;
-    width: 80%;
+    width: 73%;
     color: #ffb464;
     display: flex;
     flex-direction: column;
+    row-gap: 26px;
     justify-content: center;
     // padding: 20px;
     text-align: left;
+    p {
+      max-width: 70%;
+    }
   }
   
 }
