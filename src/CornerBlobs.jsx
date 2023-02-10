@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 function addClass(htmlObj, className) {
-  console.log({ htmlObj });
   let arr;
   arr = Array.from(htmlObj);
   arr.forEach((el) => {
@@ -17,7 +16,6 @@ function addClass(htmlObj, className) {
 function CornerBlobs({ wrapperClass }) {
   useEffect(() => {
     const collection = document.querySelectorAll(".animate-me");
-    console.log({ collection });
     collection.forEach((htmlObj) => {
       const children = htmlObj.children;
       addClass(children, "disappear");
